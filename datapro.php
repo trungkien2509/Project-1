@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>ATN SHOP </title>
+    <title>ATN SHOP</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styleheader.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -13,7 +13,7 @@
   
     <!--Header -->
     <div class="header">
-        <a href="#" class="logo">ATN SHOP </a>
+        <a href="#" class="logo">ATN SHOP</a>
         <div class="header-right">
           <a class="active" href="#home">Home</a>
           <a href="#contact">Contact</a>
@@ -24,37 +24,44 @@
                 <img src="pic/6.jpg" class="d-block w-100" alt="...">
               </div>
     <?php
-    $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
-    $dbname = "d9k3sdp7l1fclf";
-    $port = "5432";
-    $user = "hponwzabpnmzxs";
-    $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
+  $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
+  $dbname = "d9k3sdp7l1fclf";
+  $port = "5432";
+  $user = "hponwzabpnmzxs";
+  $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
     $ssl = "require";
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
-
-	$query = 'SELECT idproduct, nameproduct , price , picture , describe  FROM "product" ORDER BY "idproduct"';
+    if ($_GET['idproduct']>0){
 	
-    $prod = pg_query($link, $query);
+        $sql = 'SELECT idproduct, nameproduct, price, picture, describe FROM "product" Where idproduct=' .$_GET['idproduct'];
+    } else{
+        $sql = 'select * from "product"';
+    }
+    $result = pg_query($link, $sql);
 	?>
 <div class="row">	
 	<?php   
-while ($row = pg_fetch_row($prod)) { ?>
-
+$row = pg_fetch_assoc($result); ?>
 <div class="col-md-4">
     <div class="card" style="width: 100%;">
-      <img src="<?php echo $row[3];?>" >
+      <img src="<?php echo $row['picture'];?>" >
       <div class="card-body">
-        <h3><?php echo $row[2];?></h3>
-		<h6><?php echo $row[1];?> </h6>
+        <h3><?php echo $row['price'];?></h3>
+		<h6><?php echo $row['nameproduct'];?> </h6>
     <p><?php echo $row[4];?></p>
-		<h6><a href="datapro.php?idproduct=<?php echo $row[0]?>"><button class="btn btn-outline-primary">Buy</button></a></h6>
+    <form method="post" action="addcus.php">
+            ProductID: <input type="text" name="idproduct" id="idproduct" value="<?php echo $row['idproduct'];?>" <?php if ($row['idproduct'] > 0) echo "readonly";?>><br>
+            Price: <input type="text" name="price" id="price" value="<?php echo $row['price'];?>" <?php if ($row['price'] > 0) echo "readonly";?>><br>
+            CustomerID: <input type="text" name="CusID"><br>
+            CustomerName: <input type="text" name="CusName"><br>
+            Phone: <input type="text" name="Phone"><br>
+            Address: <input type="text" name="Address"><br>
+		<h6><Input type="submit" value="Buy"></a></h6>
+        </form>
       </div>
-    </div>		
+    </div>
   </div>
-
-
-<?php } ?>
   
      
           <!--footer-->
