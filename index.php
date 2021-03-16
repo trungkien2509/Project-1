@@ -32,7 +32,6 @@
     $ssl = "require";
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
-
 	$query = 'SELECT idproduct, nameproduct, price, picture, describe FROM "product" ORDER BY "id"';
 	
     $prod = pg_query($link, $query);
@@ -43,11 +42,11 @@ while ($row = pg_fetch_row($prod)) { ?>
 
 <div class="col-md-4">
     <div class="card" style="width: 100%;">
-      <img src="<?php echo $row[3];?>" >
+      <img src="<?php echo $row[1];?>" >
       <div class="card-body">
-        <h3><?php echo $row[2];?></h3>
+        <h3><?php echo $row[1];?></h3>
 		<h6><?php echo $row[1];?> </h6>
-    <p><?php echo $row[4];?></p>
+    <p><?php echo $row[1];?></p>
 		<h6><a href="datapro.php?idproduct=<?php echo $row[0]?>"><button class="btn btn-outline-primary">Buy</button></a></h6>
       </div>
     </div>		
