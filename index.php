@@ -33,7 +33,7 @@
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
 
-	$query = 'SELECT idproduct, nameproduct , price , picture , describe  FROM "product" ORDER BY "idproduct"';
+	$query = 'SELECT id , name , date , discription  FROM "products" ORDER BY "id"';
 	
     $prod = pg_query($link, $query);
 	?>
@@ -60,7 +60,7 @@ while ($row = pg_fetch_row($prod)) { ?>
           <!--footer-->
         <footer class="container">
           <div class="container text-white text-center">
-         <a href="https://www.facebook.com/trungkien.engonow/" class="#">Copyright 2021 by LuThiThong </a>              
+         <a href="https://www.facebook.com/trungkien.engonow/" class="#"> </a>              
           </div>
         </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

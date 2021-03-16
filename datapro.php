@@ -67,7 +67,7 @@ $row = pg_fetch_assoc($result); ?>
           <!--footer-->
         <footer class="container">
           <div class="container text-white text-center">
-         <a href="https://www.facebook.com/trungkien.engonow/" class="#">Copyright 2021 by LuThiThong </a>              
+         <a href="https://www.facebook.com/trungkien.engonow/" class="#"> </a>              
           </div>
         </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
