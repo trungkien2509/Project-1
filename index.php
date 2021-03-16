@@ -33,7 +33,7 @@
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
 
-	$query = 'SELECT id , name , date , discription  FROM "products" ORDER BY "id"';
+	$query = 'SELECT idproduct, nameproduct, price, picture, describe FROM "product" ORDER BY "id"';
 	
     $prod = pg_query($link, $query);
 	?>
