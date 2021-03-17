@@ -24,13 +24,13 @@
                 <img src="pic/6.jpg" class="d-block w-100" alt="...">
               </div>
     <?php
-  $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
-  $dbname = "d9k3sdp7l1fclf";
-  $port = "5432";
-  $user = "hponwzabpnmzxs";
-  $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
-    $ssl = "require";
-    $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
+      $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
+      $dbname = "d9k3sdp7l1fclf";
+      $port = "5432";
+      $user = "hponwzabpnmzxs";
+      $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
+  $ssl = "require";
+  $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
     if ($_GET['idproduct']>0){
 	
