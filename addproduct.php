@@ -7,11 +7,11 @@
     <?php echo $_POST["Picture"]; ?> <br>
     <?php echo $_POST["Describtion"]; ?> <br>
     <?php
-    $host = "ec2-54-225-190-241.compute-1.amazonaws.com";
-    $dbname = "deo68284g86ml9";
+    $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
+    $dbname = "d9k3sdp7l1fclf";
     $port = "5432";
-    $user = "zsbowtuipocfvd";
-    $pass = "aa4e1d3fefe353a1ffb6c457704b3432ffddd24cca3a929da46a25d93969e1b6";
+    $user = "hponwzabpnmzxs";
+    $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
     $ssl = "require";
 
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
