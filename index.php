@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>ATN SHOP </title>
+    <title>MCU Store</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styleheader.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -13,7 +13,7 @@
   
     <!--Header -->
     <div class="header">
-        <a href="#" class="logo">ATN SHOP </a>
+        <a href="#" class="logo">MCU Store </a>
         <div class="header-right">
           <a class="active" href="#home">Home</a>
           <a href="#contact">Contact</a>
@@ -24,15 +24,16 @@
                 <img src="pic/6.jpg" class="d-block w-100" alt="...">
               </div>
     <?php
-        $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
-        $dbname = "d9k3sdp7l1fclf";
-        $port = "5432";
-        $user = "hponwzabpnmzxs";
-        $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
+    $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
+    $dbname = "d9k3sdp7l1fclf";
+    $port = "5432";
+    $user = "hponwzabpnmzxs";
+    $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
     $ssl = "require";
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
-	$query = 'SELECT idproduct, nameproduct, price, picture, describe FROM "product" ORDER BY "id"';
+
+	$query = 'SELECT idproduct, nameproduct , price , picture , describe  FROM "product" ORDER BY "idproduct"';
 	
     $prod = pg_query($link, $query);
 	?>
@@ -42,11 +43,11 @@ while ($row = pg_fetch_row($prod)) { ?>
 
 <div class="col-md-4">
     <div class="card" style="width: 100%;">
-      <img src="<?php echo $row[1];?>" >
+      <img src="<?php echo $row[3];?>" >
       <div class="card-body">
-        <h3><?php echo $row[1];?></h3>
+        <h3><?php echo $row[2];?></h3>
 		<h6><?php echo $row[1];?> </h6>
-    <p><?php echo $row[1];?></p>
+    <p><?php echo $row[4];?></p>
 		<h6><a href="datapro.php?idproduct=<?php echo $row[0]?>"><button class="btn btn-outline-primary">Buy</button></a></h6>
       </div>
     </div>		
@@ -59,7 +60,7 @@ while ($row = pg_fetch_row($prod)) { ?>
           <!--footer-->
         <footer class="container">
           <div class="container text-white text-center">
-         <a href="https://www.facebook.com/trungkien.engonow/" class="#"> </a>              
+         <a href="https://www.facebook.com/lu.thi.thong/" class="#">Copyright 2021 by LuThiThong </a>              
           </div>
         </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

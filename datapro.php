@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>ATN SHOP</title>
+    <title>MCU Store</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styleheader.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -13,7 +13,7 @@
   
     <!--Header -->
     <div class="header">
-        <a href="#" class="logo">ATN SHOP</a>
+        <a href="#" class="logo">MCU Store </a>
         <div class="header-right">
           <a class="active" href="#home">Home</a>
           <a href="#contact">Contact</a>
@@ -24,13 +24,13 @@
                 <img src="pic/6.jpg" class="d-block w-100" alt="...">
               </div>
     <?php
-      $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
-      $dbname = "d9k3sdp7l1fclf";
-      $port = "5432";
-      $user = "hponwzabpnmzxs";
-      $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
-  $ssl = "require";
-  $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
+    $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
+    $dbname = "d9k3sdp7l1fclf";
+    $port = "5432";
+    $user = "hponwzabpnmzxs";
+    $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
+    $ssl = "require";
+    $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
 
     if ($_GET['idproduct']>0){
 	
@@ -67,7 +67,7 @@ $row = pg_fetch_assoc($result); ?>
           <!--footer-->
         <footer class="container">
           <div class="container text-white text-center">
-         <a href="https://www.facebook.com/trungkien.engonow/" class="#"> </a>              
+         <a href="https://www.facebook.com/lu.thi.thong/" class="#">Copyright 2021 by LuThiThong </a>              
           </div>
         </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>ATN SHOP </title>
+    <title>MCU Store</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styleheader.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -10,20 +10,19 @@
   
     <!--Header -->
     <div class="header">
-        <a href="#" class="logo">ATN SHOP  </a>
+        <a href="#" class="logo">MCU Store </a>
         <div class="header-right">
           <a class="active" href="#home">Home</a>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>
       </div>
-
-<?php
-        $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
-        $dbname = "d9k3sdp7l1fclf";
-        $port = "5432";
-        $user = "hponwzabpnmzxs";
-        $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
+    <?php
+    $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
+    $dbname = "d9k3sdp7l1fclf";
+    $port = "5432";
+    $user = "hponwzabpnmzxs";
+    $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
     $ssl = "require";
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
     $idproduct = $_REQUEST['idproduct'];
@@ -33,8 +32,9 @@
     $phone = $_POST["Phone"];
     $address = $_POST["Address"];
     $mysqlquery = 'INSERT INTO public."customer" ("customerid", "customername", "phone", "address") VALUES ('."'$cusid'::integer, '$cusname'::character varying, '$phone'::integer, '$address'::character varying)".' returning "customerid"';
-    if(pg_query($link, $mysqlquery)){}
-?>
+    if(pg_query($link, $mysqlquery)){
+	}
+	?>
   <div>
     <h>Here we have</h>
     <form method="post" action="addinvoice.php">
