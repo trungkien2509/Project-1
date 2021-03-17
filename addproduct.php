@@ -26,7 +26,7 @@
     $price = $_REQUEST["Price"];
     $picture = $_REQUEST["Picture"];
     $describe = $_REQUEST["Description"];
-    $mysqlquery = 'INSERT INTO public."product" ("idproduct", "nameproduct", "price", "picture", "describe") VALUES ('."'$id'::integer, '$name'::character varying, '$price'::integer, '$picture'::character varying, '$describe'::character varying)".' returning "idproduct"';
+    $mysqlquery = 'INSERT INTO public."product" ("idproduct", "nameproduct", "price", "picture", "describe") VALUES ('."'$id'::character varying, '$name'::character varying, '$price'::integer, '$picture'::character varying, '$describe'::character varying)".' returning "idproduct"';
     echo $mysqlquery;
     
     if(pg_query($link, $mysqlquery)){
