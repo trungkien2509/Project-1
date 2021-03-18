@@ -23,7 +23,7 @@
               <div class="carousel-item active">
                 <img src="pic/6.jpg" class="d-block w-100" alt="...">
               </div>
-    <?php
+  <?php
     $host = "ec2-54-160-7-200.compute-1.amazonaws.com";
     $dbname = "d9k3sdp7l1fclf";
     $port = "5432";
@@ -31,11 +31,8 @@
     $pass = "5e0742fe796e8f01920bfdc310411d7359e62b13eb13a2311e011efadbe8edff";
     $ssl = "require";
     $link = pg_connect("host=".$host." dbname=".$dbname." port=".$port." user=".$user." password=".$pass." sslmode=".$ssl);
-
-
-	$query = 'SELECT idproduct, nameproduct , price , picture , describe  FROM "product" ORDER BY "idproduct"';
-	
-    $prod = pg_query($link, $query);
+	  $query = 'SELECT idproduct, nameproduct , price , picture , describe  FROM "product" ORDER BY "idproduct"';
+	  $prod = pg_query($link, $query);
 	?>
 <div class="row">	
 	<?php   
@@ -48,7 +45,7 @@ while ($row = pg_fetch_row($prod)) { ?>
         <h3><?php echo $row[2];?></h3>
 		<h6><?php echo $row[1];?> </h6>
     <p><?php echo $row[4];?></p>
-		<h6><a href="datapro.php?idproduct=<?php echo $row[0]?>"><button class="btn btn-outline-primary">Buy</button></a></h6>
+		<h6><a href="datapro.php/idproduct=<?php echo $row[0]?>"><button class="btn btn-outline-primary">Buy</button></a></h6>
       </div>
     </div>		
   </div>
