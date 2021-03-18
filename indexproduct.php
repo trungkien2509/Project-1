@@ -10,8 +10,8 @@
  
  </head>
  <body>
- 	<h1>My Mobile App</h1>
-	 <p> Input Product Details </p>
+ 	<h1>Inputting Products</h1>
+	 <p> In this page, users need to input the information of products, as follows</p>
 	 <form method="post" action="addproduct.php">
             ID: <input type="text" name="ID"><br>
             Name: <input type="text" name="Name"><br>

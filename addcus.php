@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>MCU Store</title>
+    <title>ATN Toy Shop</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styleheader.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -10,9 +10,9 @@
   
     <!--Header -->
     <div class="header">
-        <a href="#" class="logo">MCU Store </a>
+        <a href="index.php" class="logo">ATN Toy Shop</a>
         <div class="header-right">
-          <a class="active" href="#home">Home</a>
+          <a class="active" href="index.php">Home</a>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>
@@ -36,7 +36,7 @@
 	}
 	?>
   <div>
-    <h>Here we have</h>
+    <h>In this page, you have to input the information of Products and Customers in order to generate an invoice </h>
     <form method="post" action="addinvoice.php">
             ProductID: <input type="text" name="idproduct" id="idproduct" value="<?php echo $idproduct;?>"><br>
             CustomerID: <input type="text" name="customerid" value="<?php echo $cusid; ?>"><br>

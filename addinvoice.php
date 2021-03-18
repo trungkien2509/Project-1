@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>MCU Store</title>
+    <title>ATN Toy Shop</title>
     <style>
 table, th, td {
     border: 2px solid black;
@@ -18,9 +18,9 @@ th, td {
   
     <!--Header -->
     <div class="header">
-        <a href="#" class="logo">MCU Store </a>
+        <a href="index.php" class="logo">ATN Toy Shop</a>
         <div class="header-right">
-          <a class="active" href="#home">Home</a>
+          <a class="active" href="index.php">Home</a>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>

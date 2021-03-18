@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>MCU Store</title>
+    <title>ATN Toy Shop</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styleheader.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -13,9 +13,9 @@
   
     <!--Header -->
     <div class="header">
-        <a href="#" class="logo">MCU Store </a>
+        <a href="index.php" class="logo">ATN Toy Shop </a>
         <div class="header-right">
-          <a class="active" href="#home">Home</a>
+          <a class="active" href="index.php">Home</a>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>
@@ -60,7 +60,7 @@ while ($row = pg_fetch_row($prod)) { ?>
           <!--footer-->
         <footer class="container">
           <div class="container text-white text-center">
-         <a href="https://www.facebook.com/lu.thi.thong/" class="#">Copyright 2021 by LuThiThong </a>              
+         <a href="#" class="#">This is the official website OF ATN TOY SHOP</a>              
           </div>
         </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
